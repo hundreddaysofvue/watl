@@ -21,10 +21,10 @@ new Vue({
                   value="1"
                   :id="todo.id"
                   v-model="todo.done"
-                />
-                <label :for="todo.id"></label>
+                  class="offscreen"
+                /><label :for="todo.id" class="switch"></label>
               </div>
-              <span :class="{'done': todo.done}">{{ todo.text }}</span>&nbsp;
+              <span :class="['taskname', {'done': todo.done}]">{{ todo.text }}</span>&nbsp;
               <span
                 class="delete"
                 @click="deleteTask(todo.id)"
